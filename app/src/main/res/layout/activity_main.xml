@@ -8,9 +8,47 @@
     android:background="#009688"
     tools:ignore="ExtraText,MissingClass">
 
-    <!-- TextView -->
+    <!-- ImageView для отображения изображений -->
+    <ImageView
+        android:id="@+id/imageView_slider"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- ImageView -->
+    <!-- Контейнер для кнопок -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Кнопка "Назад" -->
+        <Button
+            android:id="@+id/buttonPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:layout_margin="8dp" />
+
+        <!-- Кнопка "Вперёд" -->
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вперёд"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+
+
 
     <TextView
         android:id="@+id/textView5"
